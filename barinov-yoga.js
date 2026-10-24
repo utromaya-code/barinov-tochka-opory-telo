@@ -32,10 +32,22 @@ if (navToggle && siteNav) {
 
 const themeToggle = document.getElementById("theme-toggle");
 if (themeToggle) {
+  const syncThemeToggle = () => {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    themeToggle.setAttribute("aria-pressed", String(dark));
+    themeToggle.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
+  };
+  syncThemeToggle();
   themeToggle.addEventListener("click", () => {
     const root = document.documentElement;
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem("tochka-body-theme", next);
+    } catch (_) {
+      // The theme still works when browser storage is unavailable.
+    }
+    syncThemeToggle();
   });
 }
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Точка опоры · Тело — курс по мобильности и стабильности</title>
   <meta name="description" content="Четыре недели практики с Ильёй Бариновым: 6 занятий в записи, 3 живых разбора и финальная практика. Учимся двигаться свободнее и выбирать нагрузку для своего тела. Старт 22 ноября 2026 года.">
-  <meta name="theme-color" content="#F4F1EA">
+  <meta name="theme-color" content="#FCFCF9">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:title" content="Точка опоры · Тело — курс Ильи Баринова">
@@ -16,11 +16,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="assets/brand/karp-mark-red.jpg">
   <link rel="apple-touch-icon" href="assets/brand/karp-mark-red.jpg">
-  <script>(function(){if(window.matchMedia("(prefers-color-scheme:dark)").matches){document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector("meta[name='theme-color']");if(m)m.content="#1A1714";}})()</script>
+  <script>(function(){try{if(localStorage.getItem("tochka-body-theme")==="dark"){document.documentElement.setAttribute("data-theme","dark");var m=document.querySelector("meta[name='theme-color']");if(m)m.content="#142C29";}}catch(e){}})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800;900&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="preload" href="assets/images/tochka-opory/editorial/ilya-portrait-tang.jpg" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Inter+Tight:wght@500;700;800;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/images/tochka-opory/editorial/ilya-practice-side-plank.jpg" as="image">
   <style>
     /* =====================================================
        ТОЧКА ОПОРЫ — editorial (Obys-style), палитра по знаку карпа
@@ -954,6 +954,7 @@
     /* Featured tier */
     :root[data-theme="dark"] .tier--featured { background: rgba(216, 90, 74, 0.10); }
   </style>
+  <link rel="stylesheet" href="editorial.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -964,7 +965,7 @@
         <span class="brand-name">Точка опоры</span>
       </a>
 
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Переключить тему" aria-pressed="false">
         <span class="theme-label-light">Light</span><span class="theme-sep" aria-hidden="true">&thinsp;/&thinsp;</span><span class="theme-label-dark">Dark</span>
       </button>
 
@@ -983,26 +984,36 @@
 
   <main id="main">
     <section class="hero" id="hero" aria-label="Первый экран">
-      <img class="hero-watermark" src="assets/brand/karp-mark-soft.jpg" alt="" aria-hidden="true" decoding="async">
-      <div class="container">
-        <div class="hero-top">
-          <span class="label">(Илья Баринов · первая часть курса)</span>
-          <span class="label">(Тело · 2026)</span>
+      <div class="hero-cover">
+        <img class="hero-cover-image" src="assets/images/tochka-opory/editorial/ilya-practice-side-plank.jpg" alt="Илья Баринов показывает боковую планку в светлом зале" width="1600" height="1134" fetchpriority="high" decoding="async">
+        <div class="container hero-cover-inner">
+          <div class="hero-top">
+            <span class="label">Курс Ильи Баринова · первая часть</span>
+            <span class="label">Старт 22.11.2026</span>
+          </div>
+          <h1><span class="hero-title-main">Точка опоры</span><span class="hero-title-edition">Тело</span></h1>
+          <p class="hero-cover-note">Мобильность. Стабильность.<br>Уверенность в движении.</p>
+          <a class="btn hero-cover-action" href="#apply">Присоединиться <span aria-hidden="true">↗</span></a>
         </div>
-        <h1>Точка<br>опоры</h1>
-        <div class="hero-mid">
-          <div class="hero-copy">
-            <p class="hero-subtitle"><strong>Тело должно двигаться свободно.</strong> Четыре недели практики по мобильности и стабильности: меньше лишнего напряжения, больше понимания своего тела. Не нужно быть гибким или заниматься йогой раньше.</p>
+      </div>
+      <div class="container">
+        <div class="hero-intro">
+          <div>
+            <p class="label">Практика для обычной жизни</p>
+            <p class="hero-subtitle"><strong>Тело должно<br>двигаться свободно.</strong></p>
+          </div>
+          <div class="hero-description">
+            <p>Четыре недели практики по мобильности и стабильности: меньше лишнего напряжения, больше понимания своего тела. Не нужно быть гибким или заниматься йогой раньше.</p>
             <div class="hero-actions">
-              <a class="btn" href="#apply">Оставить заявку</a>
-              <a class="btn btn-ghost" href="#program">Программа</a>
+              <a class="link-cta" href="#program">Посмотреть программу <span aria-hidden="true">↗</span></a>
+              <a class="link-cta" href="#pricing">Выбрать формат <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <figure class="hero-visual" style="margin:0">
-            <div class="photo-frame photo-frame--tall">
-              <img src="assets/images/tochka-opory/editorial/ilya-portrait-tang.jpg" alt="Илья Баринов — курс «Точка опоры»" width="1129" height="1600" fetchpriority="high" decoding="async">
-            </div>
-          </figure>
+        </div>
+        <div class="hero-author">
+          <img src="assets/images/tochka-opory/editorial/ilya-portrait-tang.jpg" alt="Портрет Ильи Баринова" width="1129" height="1600" loading="lazy" decoding="async">
+          <p><span class="label">С вами на курсе</span><strong>Илья Баринов</strong></p>
+          <a class="link-cta" href="#author">Об авторе <span aria-hidden="true">↗</span></a>
         </div>
         <ul class="facts" aria-label="Ключевые факты курса">
           <li><span class="dot" aria-hidden="true">●</span><span class="k">Старт</span><span class="v">22 ноября 2026</span></li>
@@ -1026,7 +1037,7 @@
 
     <section class="quote-band section--ink" aria-label="Смысл курса">
       <div class="container" data-reveal>
-        <blockquote>Свободное тело — не самое гибкое. Оно умеет двигаться там, где нужно движение, и держать опору там, где нужна устойчивость.</blockquote>
+        <blockquote>Свободное тело — <em>не самое гибкое.</em> Оно умеет двигаться там, где нужно движение, и держать опору там, где нужна устойчивость.</blockquote>
         <cite>— Принцип курса</cite>
       </div>
     </section>
@@ -1623,7 +1634,7 @@
       new MutationObserver(function() {
         var isDark = document.documentElement.getAttribute("data-theme") === "dark";
         var meta = document.querySelector("meta[name='theme-color']");
-        if (meta) meta.content = isDark ? "#1A1714" : "#F4F1EA";
+        if (meta) meta.content = isDark ? "#142C29" : "#FCFCF9";
       }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
       // Sticky CTA: появляется после hero, прячется на секции формы
