@@ -206,8 +206,8 @@ h2 { font-family: var(--font-editorial); font-weight: 600; text-transform: none;
   .header-inner { gap: 12px; }
   .theme-toggle { margin-left: auto; font-size: 10px; }
   .site-nav .nav-cta { margin-top: 16px; padding: 14px 16px; background: var(--carbon); }
-  .hero-cover { height: 660px; min-height: 0; max-height: none; }
-  .hero-cover-image { top: auto; width: 100%; height: 400px; object-fit: cover; object-position: center top; }
+  .hero-cover { height: min(660px, calc(100svh - 110px)); min-height: 460px; max-height: none; }
+  .hero-cover-image { top: auto; width: 100%; height: calc(100% - 260px); object-fit: cover; object-position: center top; }
   .hero-top { align-items: start; padding: 18px 0 12px; gap: 16px; }
   .hero-top .label { font-size: 10px; max-width: 180px; }
   .hero-top .label:last-child { flex-shrink: 0; max-width: 85px; text-align: right; }
@@ -256,8 +256,8 @@ h2 { font-family: var(--font-editorial); font-weight: 600; text-transform: none;
   .site-footer { padding-bottom: 100px; }
 }
 @media (max-width: 380px) {
-  .hero-cover { height: 570px; }
-  .hero-cover-image { height: 350px; }
+  .hero-cover { height: min(570px, calc(100svh - 110px)); }
+  .hero-cover-image { height: calc(100% - 220px); }
   .hero h1 { font-size: 51px; }
   .hero-title-edition { font-size: 75px; }
   .hero-cover-note { top: 164px; width: 135px; font-size: 10px; }
